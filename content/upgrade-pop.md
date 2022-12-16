@@ -169,6 +169,8 @@ These older Pop!\_OS releases are now unsupported and no new updates are availab
 
 ```bash
 # change server from us.archive to old-releases
+sudo sed -i 's/us.archive/old-releases/g' /etc/apt/sources.list.d/system.sources
+# for pre 21.04 use
 sudo sed -i 's/us.archive/old-releases/g' /etc/apt/sources.list
 # request release files
 sudo apt update -m
